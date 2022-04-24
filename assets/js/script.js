@@ -48,18 +48,19 @@ function saveDailyInput(event) {
     // add array to local storage
     localStorage.setItem("dayEntries", JSON.stringify(dayEntries));
 
+    // reload page so that new entries don't get appended to local storage string
+    location.reload();
+
 
 }
 
 function retrieveDailyInput() {
 
     //retrieve dayEntries array from local storage
-    var getDayEntries = localStorage.getItem("dayEntries");
-
-    // parse array
-    JSON.parse(getDayEntries);
+    var getDayEntries = JSON.parse(localStorage.getItem("dayEntries"));
     console.log(getDayEntries);
 
+if (getDayEntries !== null) {
     // pull information from textArea and getDayEntries
     // solution found on https://stackoverflow.com/questions/57903061/foreach-loop-through-two-arrays-at-the-same-time-in-javascrip
     textAreaEl.forEach((textArea1, index) => {
@@ -67,7 +68,10 @@ function retrieveDailyInput() {
         textArea1.value = arr2;
         console.log(textArea1);
     });
-
+}
+else {
+    return;
+}
 
 }
 
