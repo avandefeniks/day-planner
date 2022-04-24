@@ -6,3 +6,6 @@
 * Persistent entries that remain even if the browser is reloaded
 * Entries that are stored via an array in local storage
 * Day and date display
+
+### Hour Color Example ###
+![](./assets/images/HourColorExample.jpg)
