@@ -7,5 +7,10 @@
 * Entries that are stored via an array in local storage
 * Day and date display
 
+### Technologies used ###
+* HTML
+* CSS
+* JavaScript
+
 ### Hour Color Example ###
 ![](./assets/images/HourColorExample.jpg)
